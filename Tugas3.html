@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Tugas Basis Data </title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Tugas Basis Data</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Profile</span>
+        </a>
+         <span class="tooltip">Profile</span>
+      </li>
+     <li>
+       <a href="Tugas1.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Tugas 1</span>
+       </a>
+       <span class="tooltip">Tugas 1</span>
+     </li>
+     <li>
+        <a href="Tugas2.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas2</span>
+        </a>
+        <span class="tooltip">Tugas2</span>
+      </li>
+      <li>
+        <a href="Tugas3.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas3</span>
+        </a>
+        <span class="tooltip">Tugas3</span>
+      </li>
+      <li>
+        <a href="Tugas4.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas4</span>
+        </a>
+        <span class="tooltip">Tugas4</span>
+      </li>
+      <li>
+        <a href="Tugas5.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas5</span>
+        </a>
+        <span class="tooltip">Tugas5</span>
+      </li>
+      <li>
+        <a href="Tugas6.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas6</span>
+        </a>
+        <span class="tooltip">Tugas6</span>
+      </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="/assets/profile.jpeg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Muhammad Jibrail N</div>
+             <div class="job">UBP Karawang</div>
+           </div>
+         </div>
+         <!-- <i class='bx bx-log-out' id="log_out" ></i> -->
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text"><strong>Apa itu relation pada ERD? </strong></div>    
+                <div class="text-content" style="margin: 10px 10px;">
+                  Relasi menggambarkan keterkaitan antara dua atau lebih entitas dalam basis data. Relasi menunjukkan bagaimana entitas-entitas tersebut berinteraksi satu sama lain atau bagaimana mereka terhubung dalam konteks aplikasi atau sistem yang dirancang. Dalam ERD, relasi biasanya digambarkan sebagai garis yang menghubungkan dua entitas. Contoh relasi meliputi "Pegawai bekerja di Departemen," "Pelanggan melakukan Pemesanan," dan sebagainya. Relasi juga dapat memiliki atribut khusus yang menyimpan informasi tambahan tentang bagaimana entitas-entitas tersebut berhubungan satu sama lain.
+                  Dalam ERD, hubungan (relasi) dapat terdiri dari sejumlah entitas yang disebut dengan derajad relasi. Derajad relasi maksimum disebut dengan kardinalitas sedangkan derajad minimum disebut dengan modalitas. Jadi kardinalitas relasi menunjukkan jumlah maksimum entitas yang dapat berelasi dengan entitas lain.
+                  Terdapat tiga jenis relasi yang digunakan dalam ERD dan perlu kamu ketahui, berikut adalah jenisnya.
+                  <center><img src="assets/SimbolKardinalitasERD.jpg" alt="SimbolKardinalitasERD" class="img-content"></center>
+                  <ul>
+                    <li class="list-content">
+                      <div><strong>One to One</strong></div>
+                      <div>One to one berarti setiap entitas hanya dapat memiliki relasi dengan satu entitas lain. Contohnya seperti data mahasiswa dengan NIM (Nomor Induk Mahasiswa).</div>
+                    </li>
+                    <li class="list-content">
+                      <div><strong>One to Many</strong></div>
+                      <div>One to many memiliki arti satu entitas dapat memiliki relasi dengan beberapa entitas, begitu pula sebaliknya. Contoh dari implementasi one to many ini adalah jurusan dengan mahasiswanya.</div>
+                    </li>
+                    <li class="list-content">
+                      <div><strong>Many to Many</strong></div>
+                      <div>Many to many memiliki arti setiap entitas yang ada dapat memiliki relasi dengan entitas lain, begitu pula sebaliknya. Contoh dari relasi ini adalah mahasiswa dengan data terkait UKM (Unit Kegiatan Mahasiswa).</div>
+                    </li>
+                  </ul>
+                </div>
+            <br>
+        </ul>
+        <div class="text"><strong>Mengapa many-to-many tidak baik digunakan pada ERD?</strong></div>
+        <div class="text-content" style="margin: 10px 10px;">
+            Relasi many-to-many dalam basis data dapat menyebabkan masalah dan inefisiensi. Berikut adalah beberapa alasan mengapa hubungan many-to-many tidak dianggap sebagai desain database yang baik:
+            <ul>
+              <li class="list-content">
+                <div><strong>Duplikasi Data</strong></div>
+                <div>Relasi many-to-many dapat menyebabkan duplikasi data, yang dapat menyebabkan inkonsistensi dan redundansi dalam database. Hal ini dapat mengakibatkan hasil query yang salah dan menghabiskan sumber daya komputasi yang berlebihan.</div>
+              </li>
+              <li class="list-content">
+                <div><strong>Sulit Melakukan Query</strong></div>
+                <div>Relasi many-to-many dapat menyulitkan untuk melakukan query basis data secara efisien.</div>
+              </li>
+              <li class="list-content">
+                <div><strong>Kurangnya Konsistensi Data</strong></div>
+                <div>Relasi many-to-many dapat menyebabkan kurangnya konsistensi data, karena mungkin ada beberapa cara untuk menghubungkan entitas-entitas tersebut, dan hal ini dapat menyulitkan untuk menjaga integritas data.</div>
+              </li>
+              <li class="list-content">
+                <div><strong>Ambiguitas</strong></div>
+                <div>Dalam hubungan many-to-many, sulit untuk menggambarkan dengan jelas bagaimana dua entitas terkait secara langsung. Oleh karena itu, seringkali lebih baik untuk menguraikan hubungan ini menjadi dua hubungan one-to-many yang lebih mudah dimengerti.</div>
+              </li>
+              <li class="list-content">
+                <div><strong>Kesulitan dalam Memelihara Integritas Data</strong></div>
+                <div>Memelihara integritas data (seperti menghindari duplikasi data atau konflik data) lebih sulit dalam hubungan many-to-many. Penggunaan tabel penengah dapat mempermudah pengelolaan data.</div>
+              </li>
+            </ul>
+          </div>
+
+        
+        
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  //   sidebar.classList.toggle("open");
+  //   menuBtnChange(); //calling the function(optional)
+  // });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>

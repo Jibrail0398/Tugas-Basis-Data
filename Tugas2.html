@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Tugas Basis Data </title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Tugas Basis Data</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Profile</span>
+        </a>
+         <span class="tooltip">Profile</span>
+      </li>
+     <li>
+       <a href="Tugas1.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Tugas 1</span>
+       </a>
+       <span class="tooltip">Tugas 1</span>
+     </li>
+     <li>
+        <a href="Tugas2.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas2</span>
+        </a>
+        <span class="tooltip">Tugas2</span>
+      </li>
+      <li>
+        <a href="Tugas3.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas3</span>
+        </a>
+        <span class="tooltip">Tugas3</span>
+      </li>
+      <li>
+        <a href="Tugas4.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas4</span>
+        </a>
+        <span class="tooltip">Tugas4</span>
+      </li>
+      <li>
+        <a href="Tugas5.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas5</span>
+        </a>
+        <span class="tooltip">Tugas5</span>
+      </li>
+      <li>
+        <a href="Tugas6.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas6</span>
+        </a>
+        <span class="tooltip">Tugas6</span>
+      </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="/assets/profile.jpeg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Muhammad Jibrail N</div>
+             <div class="job">UBP Karawang</div>
+           </div>
+         </div>
+         <!-- <i class='bx bx-log-out' id="log_out" ></i> -->
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div>
+        <!-- <h1 style="margin-left: 30px;">ERD Mahasiswa dengan Wali Dosen</h1>
+        <br>
+        <center><img src="assets/ERD dosen Wali.jpg" alt="" class="img-content"></center>
+        <br> -->
+        <h1 style="margin-left: 10px;">Apa itu Primary Key, Foreign Key dan Candidate Key</h1>
+        <ul>
+            <div style="padding: 25px;">
+                <strong><li class="list-content">Primary Key</li></strong>
+                <p class="text-content">
+                    Primary key adalah attribut yang ada didalam suatu basis data yang dimana digunakan untuk mengidentifikasi entitas suatu baris didalam tabel. 
+                    Nilai yang ada didalam primary key harus bersifat unik. Sederhananya primary key dapat juga diartikan sebagai kolom yang berisi nilai unik, yang dimana memiliki fungsi sebagai identitas yang untuk membedakan setiap record yang ada didalam suatu tabel. 
+                    Primary Key merupakan `tanda pengenal` yang ditetapkan untuk suatu entitas didalam tabel. Primary Key ini harus merupakan atribut yang paling cocok dan paling dapat membedakan data-data yang ada di dalam tabel tersebut. 
+                    
+                    Contoh Primary Key adalah sebagai berikut:
+                </p>
+                  <ol>
+                    <li class="list-content-ol">Tabel Pegawai dengan Primary Key `ID Pegawai`</li>
+                    <li class="list-content-ol">Tabel Mahasiswa dengan Primary Key `Nomor Induk Mahasiswa`</li>
+                    <li class="list-content-ol">Tabel Pelanggan dengan Primary Key `ID Pelanggan`</li>
+                    <li class="list-content-ol">Tabel Penduduk dengan Primary Key `Nomor Induk Kepundudukan`</li>
+                    <li class="list-content-ol">Tabel Siswa dengan Primary Key `Nomor Induk Siswa Nasional`</li>
+                  </ol>
+                  <strong><li class="list-content">Foreign Key</li></strong>
+                  <p class="text-content">
+                    Foreign Key adalah atribut dalam sebuah tabel yang digunakan untuk menghubungkan 
+                    antara dua tabel dengan membentuk relasi referensial. Apabila primary key berfungsi sebagai `tanda pengenal`, maka foreign key berfungsi sebagai penghubung antartabel.
+                    Attribut yang digunakan sebagai foreign key harus berupa primary key dari tabel asalnya.
+
+                    Contoh Foreign Key adalah sebagai berikut:
+                  </p>
+                  <ol>
+                    <li class="list-content-ol">Tabel Pelanggan dan Tabel Pesanan:</li>
+                    <p class="text-content" style="margin-left: 35px;">Dalam tabel pelanggan,`ID Pelanggan` sebagai primary key.
+                      Dalam tabel pesanan, kolom `ID Pesanan` sebagai foreign key yang mengacu pada `ID Pelanggan` dalam tabel pelanggan. 
+                      Ini menghubungkan setiap pesanan dengan pelanggan yang melakukan pesanan tersebut.
+                    </p>
+                    <li class="list-content-ol">Tabel Produk dan Tabel Pesanan:</li>
+                    <p class="text-content" style="margin-left: 35px;">Dalam tabel produk, kolom `ID Produk` sebagai primary key. 
+                      Dalam tabel pesanan, kolom "ID Produk" sebagai foreign key yang mengacu pada "ID Produk" 
+                      dalam tabel produk. Ini menghubungkan setiap item dalam pesanan dengan produk yang terkait.</p>
+                    <li class="list-content-ol">Tabel Karyawan dan Tabel Proyek:</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel karyawan, kolom `ID Karyawan` sebagai primary key. Dalam tabel proyek, 
+                      kolom "ID Manajer" sebagai foreign key yang mengacu pada `ID Karyawan` dalam tabel karyawan. 
+                      Ini digunakan untuk menunjukkan manajer yang bertanggung jawab atas proyek tertentu.
+                    </p>
+                    <li class="list-content-ol">Tabel Negara dan Tabel Kota:</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel negara, kolom `Kode Negara` sebagai primary key. 
+                      Dalam tabel kota, kolom `Kode Negara` sebagai foreign key yang mengacu pada `Kode Negara`
+                      dalam tabel negara. Ini menghubungkan setiap kota dengan negara tempat kota tersebut berada.
+                    </p>
+                    <li class="list-content-ol">Tabel Pemesanan Tiket dan Tabel Maskapai:</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel pemesanan tiket,
+                      kolom `ID Tiket` sebagai foreign key yang mengacu pada `ID Maskapai` dalam tabel maskapai. 
+                      Ini menghubungkan setiap pemesanan tiket dengan maskapai penerbangan yang digunakan.
+                    </p>
+                  </ol>
+                <strong><li class="list-content">Candidate Key</li></strong>
+                <p class="text-content">
+                  Candidate key adalah salah satu atau beberapa kolom dalam sebuah tabel basis data yang memiliki
+                  sifat unik dan dapat digunakan sebagai primary key. Beberapa kunci yang memenuhi syarat sebagai 
+                  primary key, satu di antaranya dipilih sebagai primary key yang akan menjadi kunci utama dalam tabel tersebut.
+                </p>
+                  <ol>
+                    <li class="list-content-ol">Nomor Identifikasi Karyawan (Employee ID):</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel data karyawan, kolom "Nomor Identifikasi Karyawan" bisa menjadi candidate key. Setiap karyawan memiliki nomor identifikasi yang berbeda dan unik.
+                    </p>
+                    <li class="list-content-ol">Nomor Pelanggan (Customer Number):</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel data pelanggan, kolom "Nomor Pelanggan" bisa menjadi candidate key. Setiap pelanggan memiliki nomor pelanggan yang berbeda dan unik.
+                    </p>
+                    <li class="list-content-ol">Nomor Penerbangan (Flight Number):</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel data penerbangan, kolom "Nomor Penerbangan" bisa menjadi candidate key. Setiap penerbangan memiliki nomor penerbangan yang berbeda dan unik.
+                    </p>
+                    <li class="list-content-ol">Nomor Paspor (Passport Number):</li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel data perjalanan internasional, kolom "Nomor Paspor" bisa menjadi candidate key. Setiap individu memiliki nomor paspor yang berbeda dan unik.
+                    </p>
+                    <li class="list-content-ol">Nomor Produk (Product Number): </li>
+                    <p class="text-content" style="margin-left: 35px;">
+                      Dalam tabel data produk, kolom "Nomor Produk" bisa menjadi candidate key. Setiap produk memiliki nomor produk yang berbeda dan unik.
+                    </p>
+                  </ol>                  
+            </div>
+        </ul>
+    </div>        
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  //   sidebar.classList.toggle("open");
+  //   menuBtnChange(); //calling the function(optional)
+  // });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>

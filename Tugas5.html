@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tugas Basis Data</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <div class="logo_name">Tugas Basis Data</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="index.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Profile</span>
+          </a>
+          <span class="tooltip">Profile</span>
+        </li>
+        <li>
+          <a href="Tugas1.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas 1</span>
+          </a>
+          <span class="tooltip">Tugas 1</span>
+        </li>
+        <li>
+          <a href="Tugas2.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas2</span>
+          </a>
+          <span class="tooltip">Tugas2</span>
+        </li>
+        <li>
+          <a href="Tugas3.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas3</span>
+          </a>
+          <span class="tooltip">Tugas3</span>
+        </li>
+        <li>
+          <a href="Tugas4.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas4</span>
+          </a>
+          <span class="tooltip">Tugas4</span>
+        </li>
+        <li>
+          <a href="Tugas5.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas5</span>
+          </a>
+          <span class="tooltip">Tugas5</span>
+        </li>
+        <li>
+          <a href="Tugas6.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas6</span>
+          </a>
+          <span class="tooltip">Tugas6</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="/assets/profile.jpeg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name">Muhammad Jibrail N</div>
+              <div class="job">UBP Karawang</div>
+            </div>
+          </div>
+          <!-- <i class='bx bx-log-out' id="log_out" ></i> -->
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div>
+        <h1 style="margin-left: 10px">Apa itu denormalisasi?</h1>
+        <div style="padding: 25px">
+          <h3>Denormalisasi pada ERD</h3>
+          Denormalisasi adalah kebalikan dari proses normalisasi. Denormalisasi
+          merupakan proses yang dilakukan pada database yang sudah
+          dinormalisasi, dengan cara memodifikasi struktur tabel dan mengabaikan
+          kerangkapan data (yang terkontrol) untuk meningkatkan kinerja
+          database. Pada satu sisi denormalisasi menyebabkan adanya data
+          redundancy yang lebih besar, bahkan dapat mengurangi fleksibilitas
+          basis data untuk perkembangan penggunan dimasa depan. Di sisi lain,
+          denormalisasi dapat mempercepat pemanggilan (retrieval) data, meskipun
+          dapat memperlambat proses update data. Perbedaan normalisasi dan
+          denormalisasi adalah terletak pada data redundancy dan kompleksitas
+          query. Pada data redundancy, data normalisasi harus dihilangkan
+          semaksimal mungkin sehingga apabila kita akan mengakses data dalam
+          suatu database membutuhkan query yang kompleks. Berbeda dengan
+          denormalisasi, denormalisasi disini tidak terlalu memikirkan tentang
+          data redundancy sehingga dalam mengakses data lebih cepat. Secara
+          prinsip, tidak ada metode khusus untuk melakukan denormalisasi.
+        </div>
+        <h3 style="margin-left: 10px">
+          Denormalisasi dapat dilakukan apabila terdapat:
+        </h3>
+
+        <ul>
+          <li class="list-content">
+            1. Atribut yang terderivasi (atribut turunan), yaitu atribut yang
+            nilainya bisa diperoleh dari nilai-nilai yang sudah ada pada atribut
+            lain.
+          </li>
+          <li class="list-content">
+            2. Atribut yang berlebihan, yaitu atribut yang memiliki kode
+            tambahan yang menunjukkan beberapa kondisi lainnya, seperti: Atribut
+            terkodekan (encoded attribute), Atribut gabungan (concatenated
+            attribute), Atribut tumpang-tindih (overlapping attribute), Atribut
+            bermakna ganda (alternate attribute)
+          </li>
+          <li class="list-content">
+            3. Tabel rekapitulasi (summary table), yaitu hasil pengolahan dari
+            semua tabel yang ada. Pengolahan tersebut melibatkan banyak tabel
+            sehingga akan membutuhkan waktu yang lama. Jika hal tersebut sering
+            diakses dan diperlukan, maka perlu dibuat tabel khusus untuk
+            menyimpan data hasil rekapitulasi tersebut.
+          </li>
+        </ul>
+        <p class="text-content" style="margin: 10px 10px">
+          Beberapa situasi yang menjadi pertimbangan untuk melakukan
+          denormalisasi sebagai upaya mempercepat proses transaksi adalah
+          sebagai berikut:
+        </p>
+        <ol>
+          <li class="list-content-ol">
+            Mengkombinasikan relasi One to One (1:1)
+          </li>
+          <li class="list-content-ol">
+            Menduplikasi field bukan kunci dalam relasi one to many (1:M) untuk
+            mereduksi proses join saat query.
+          </li>
+          <li class="list-content-ol">
+            Menduplikasi field FK dalam relasi One to Many (1:M) untuk mereduksi
+            proses join saat query.
+          </li>
+          <li class="list-content-ol">Membuat batasan pada multi atribut</li>
+        </ol>
+        <h3 style="margin-left: 10px">Tips Melakukan Denormalisasi Data</h3>
+        <ol>
+          <li class="list-content-ol">
+            <h4>Periksa penyimpanan database</h4>
+            <p class="text-content" style="margin: 10px 25px">
+              Denormalisasi data adalah teknik yang membuat value dan tabel
+              tambahan pada data sehingga membutuhkan penyimpanan besar.
+              Memastikan ruang penyimpanan masih tersedia dalam jumlah besar
+              adalah hal krusial. Jika ruang penyimpanan tersisa sedikit maka
+              akan memengaruhi proses operasional.
+            </p>
+          </li>
+          <li class="list-content-ol">
+            <h4>Pastikan kembali data normalisasi</h4>
+            <p class="text-content" style="margin: 10px 25px">
+              Denormalisasi data adalah teknik yang membuat value dan tabel
+              tambahan pada data sehingga membutuhkan penyimpanan besar.
+              Memastikan ruang penyimpanan masih tersedia dalam jumlah besar
+              adalah hal krusial. Jika ruang penyimpanan tersisa sedikit maka
+              akan memengaruhi proses operasional.
+            </p>
+          </li>
+          <li class="list-content-ol">
+            <h4>Lakukan tes teknis denormalisasi terlebih dulu</h4>
+            <p class="text-content" style="margin: 10px 25px">
+              Proses denormalisasi akan membuat salinan data untuk mengoptimasi
+              respons. Oleh karena itu, penting untuk menerapkannya dalam data
+              normalisasi yang tidak lagi memiliki salinan. Hal ini dilakukan
+              untuk mencegah duplikasi data lebih lanjut dan mengoptimalkan
+              ruang penyimpanan database.
+            </p>
+          </li>
+          <li class="list-content-ol">
+            <h4>Memahami penggunaan data secara umum</h4>
+            <p class="text-content" style="margin: 10px 25px">
+              Untuk menghindari salinan data yang tidak perlu dan menghabiskan
+              ruang pentimpanan, penting untuk mengetahui penggunaan data dalam
+              database. Mengumpulkan informasi data seperti frekuensi data, data
+              apa saja yang tergabung, serta waktu respons data akan memudahkan
+              memutuskan penggunaan teknik denormalisasi data nantinya.
+            </p>
+          </li>
+          <li class="list-content-ol">
+            <h4>Gunakan database management system</h4>
+            <p class="text-content" style="margin: 10px 25px">
+              DBMS akan secara otomatis menyimpan salinan data untuk konsistensi
+              dan optimisasi waktu respons. Saat nilai data berubah, DBMS akan
+              membantu memastikan keakuratan data.
+            </p>
+          </li>
+        </ol>
+        <p class="text-content" style="margin: 10px 15px">
+          Denormalisasi penting dalam perancangan database. Apabila terdapat
+          proses pengaksesan yang dilakukan dabatase sewaktu data yang berada
+          dalam suatu tabel ada 5000 baris dengan 30000 baris, maka proses
+          tersebut akan memakan waktu yang cukup lama untuk mengakses data
+          tersebut, terlebih lagi apabila user mengaksesnya dari beberapa table
+          dan user hanya membutuhkan melihat sebagian datanya saja. Oleh karena
+          itu, denormalisasi diperlukan untuk menjaga kestabilan performa
+          sistem. Untuk menentukan apakah perlu sistem dilakukan denormalisasi
+          atau tidak untuk mengoptimalkan kinerja sistem diperlukan beberapa
+          pertimbangan.
+        </p>
+      </div>
+    </section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+      //   sidebar.classList.toggle("open");
+      //   menuBtnChange(); //calling the function(optional)
+      // });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+        }
+      }
+    </script>
+  </body>
+</html>

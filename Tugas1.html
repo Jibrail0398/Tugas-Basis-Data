@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Tugas Basis Data </title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Tugas Basis Data</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Profile</span>
+        </a>
+         <span class="tooltip">Profile</span>
+      </li>
+     <li>
+       <a href="Tugas1.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Tugas 1</span>
+       </a>
+       <span class="tooltip">Tugas 1</span>
+     </li>
+     <li>
+        <a href="Tugas2.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas2</span>
+        </a>
+        <span class="tooltip">Tugas2</span>
+      </li>
+      <li>
+        <a href="Tugas3.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas3</span>
+        </a>
+        <span class="tooltip">Tugas3</span>
+      </li>
+      <li>
+        <a href="Tugas4.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas4</span>
+        </a>
+        <span class="tooltip">Tugas4</span>
+      </li>
+      <li>
+        <a href="Tugas5.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas5</span>
+        </a>
+        <span class="tooltip">Tugas5</span>
+      </li>
+      <li>
+        <a href="Tugas6.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Tugas6</span>
+        </a>
+        <span class="tooltip">Tugas6</span>
+      </li>    
+     <li class="profile">
+         <div class="profile-details">
+           <img src="/assets/profile.jpeg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Muhammad Jibrail N</div>
+             <div class="job">UBP Karawang</div>
+           </div>
+         </div>
+         <!-- <i class='bx bx-log-out' id="log_out" ></i> -->
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <!-- <h1 style="margin-bottom:30px; margin-left: 20px;">Video Tutorial Instalasi Xampp di Windows 11</h1>
+    <div>
+      <center>
+        <iframe width="250" height="150" src="https://www.youtube.com/embed/8jUeVsOUTMU?si=9mIrJpbIsHZhf8O7" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </center>
+    </div>     -->
+      <div style="padding: 10px 5px;" class="text"><strong>Apa itu attribute, entitas dan relasi dalam ERD?</strong></div>
+      <div style="padding: 25px;" class="text-content">
+        ERD (Entity Relationship Diagram) atau diagram hubungan entitas adalah sebuah diagram yang digunakan untuk perancangan suatu database dan menunjukan relasi atau hubungan antar objek atau entitas beserta atribut-atributnya secara detail. Dengan menggunakan ERD, sistem database yang sedang dibentuk dapat digambarkan dengan lebih terstruktur dan terlihat rapi.
+        Dalam konteks Entity-Relationship Diagram (ERD)
+        atribut, entitas, dan relasi adalah komponen-komponen utama 
+        yang digunakan untuk merancang struktur data dalam sebuah basis data. 
+        Berikut adalah penjelasan singkat tentang masing-masing komponen:
+        <ul><br>
+            <li>
+                <div><strong>Entitas</strong></div>
+                <div class="text-content">Entitas adalah objek dalam dunia nyata atau dalam konteks sistem yang digunakan untuk mengumpulkan dan menyimpan data. Dalam ERD, entitas biasanya digambarkan sebagai persegi dengan nama entitas di dalamnya. Contoh entitas meliputi "Pegawai," "Pelanggan," "Produk," dan lain sebagainya. Setiap entitas memiliki atribut yang menggambarkan sifat-sifat atau karakteristik dari entitas tersebut. Entitas juga dapat memiliki identifikasi unik, yang dikenal sebagai atribut kunci (primary key), yang digunakan untuk mengidentifikasi setiap entitas secara unik. 
+                <br>
+                <br>Lalu, ada juga yang dinamakan “Entitas lemah”. Entitas lemah ini digambarkan dengan lambang persegi panjang kecil di dalam persegi panjang yang lebih besar. Mengapa disebut dengan entitas lemah? Karena entitas tersebut harus terhubung langsung dengan entitas lain, sebab entitas lemah ini tidak dapat diidentifikasi secara unik.</div>
+            </li><br>
+            <li>
+              <div><strong>Attribut</strong></div>
+              <div class="text-content">Attribut adalah karakteristik atau properti dari sebuah entitas dalam basis data. Attribut didefinisikan juga sebagai informasi yang disimpan tentang entitas tersebut. Contohnya, jika Anda memiliki entitas "Pegawai," atributnya mungkin mencakup nama, alamat, nomor telepon, gaji, dan sebagainya. Atribut bisa menjadi sifat yang dapat diukur (seperti gaji) atau sifat yang tidak dapat diukur (seperti nama). Atribut juga bisa menjadi atribut tunggal (seperti nomor telepon) atau atribut kompleks yang memiliki struktur dalam (seperti alamat dengan subatribut seperti jalan, kota, dan kode pos).
+                Ada beberapa jenis atribut yang biasa digunakan dalam ERD. Berikut adalah jenis-jenisnya:
+                <ul>
+                  <li class="list-content">
+                    <div><strong>Attribut Kunci</strong></div>
+                    <div>Atribut kunci atau Key Attributes adalah atribut yang berfungsi untuk menentukan data yang bersifat penting. Biasanya atribut kunci ini berbentuk angka atau numerik. Contoh dari atribut ini adalah No. KTP, NIM (Nomor Induk Mahasiswa), dan lain-lain. Atribut kunci ini dilambangkan dengan lingkaran lonjong dengan keterangan di dalamnya yang diberi garis bawah.</div>
+                  </li>
+                  <li class="list-content">
+                    <div><strong>Attribut Simple</strong></div>
+                    <div>Atribut simpel adalah atribut yang tidak dapat dipecah lagi dan bernilai tunggal. Contoh dari atribut ini adalah alamat kantor, nama penerbit, dan lain-lain.</div>
+                  </li>
+                  <li class="list-content">
+                    <div><strong>Attribut Multinilai</strong></div>
+                    <div>Atribut multinilai atau Multivalue Attributes adalah atribut yang memiliki atribut lebih dari satu nilai. Contoh dari atribut ini adalah sebuah website artikel yang memiliki beberapa penulis.</div>
+                  </li>
+                  <li class="list-content">
+                    <div><strong>Attribut Gabungan</strong></div>
+                    <div>Atribut gabungan adalah atribut yang terdiri dari beberapa atribut yang berukuran lebih kecil dan memiliki arti tertentu. Contoh dari atribut ini adalah sebuah nama yang terdiri atas nama depan, nama tengah, dan nama belakang.</div>
+                  </li>
+                  <li class="list-content">
+                    <div><strong>Attribut Derivatif</strong></div>
+                    <div>Atribut derivatif adalah atribut yang dihasilkan dari atribut lain dan atributnya tidak wajib untuk ditulis dalam Entity Relationship Diagram. Contoh dari atribut ini adalah selisih harga, usia, dan kelas.</div>
+                  </li>
+                </ul>
+              </div>
+          </li><br>            
+            <li>
+                <div><strong>Relasi</strong></div>
+                <div class="text-content">
+                  Relasi menggambarkan keterkaitan antara dua atau lebih entitas dalam basis data. Relasi menunjukkan bagaimana entitas-entitas tersebut berinteraksi satu sama lain atau bagaimana mereka terhubung dalam konteks aplikasi atau sistem yang dirancang. Dalam ERD, relasi biasanya digambarkan sebagai garis yang menghubungkan dua entitas. Contoh relasi meliputi "Pegawai bekerja di Departemen," "Pelanggan melakukan Pemesanan," dan sebagainya. Relasi juga dapat memiliki atribut khusus yang menyimpan informasi tambahan tentang bagaimana entitas-entitas tersebut berhubungan satu sama lain.
+                  Dalam ERD, hubungan (relasi) dapat terdiri dari sejumlah entitas yang disebut dengan derajad relasi. Derajad relasi maksimum disebut dengan kardinalitas sedangkan derajad minimum disebut dengan modalitas. Jadi kardinalitas relasi menunjukkan jumlah maksimum entitas yang dapat berelasi dengan entitas lain.
+                  Terdapat tiga jenis relasi yang digunakan dalam ERD dan perlu kamu ketahui, berikut adalah jenisnya.
+                  <ul>
+                    <li class="list-content">
+                      <div><strong>One to One</strong></div>
+                      <div>One to one berarti setiap entitas hanya dapat memiliki relasi dengan satu entitas lain. Contohnya seperti data mahasiswa dengan NIM (Nomor Induk Mahasiswa).</div>
+                    </li>
+                    <li class="list-content">
+                      <div><strong>One to Many</strong></div>
+                      <div>One to many memiliki arti satu entitas dapat memiliki relasi dengan beberapa entitas, begitu pula sebaliknya. Contoh dari implementasi one to many ini adalah jurusan dengan mahasiswanya.</div>
+                    </li>
+                    <li class="list-content">
+                      <div><strong>Many to Many</strong></div>
+                      <div>Many to many memiliki arti setiap entitas yang ada dapat memiliki relasi dengan entitas lain, begitu pula sebaliknya. Contoh dari relasi ini adalah mahasiswa dengan data terkait UKM (Unit Kegiatan Mahasiswa).</div>
+                    </li>
+                  </ul>
+                </div>
+            </li><br>
+        </ul>
+        <div>
+          <h2>Simbol Simbol ERD</h2>
+          <br>
+          <center><img class="img-content" src="assets/Simbol ERD.png" alt="Simbol ERD" class="img"></center>
+        </div>
+      </div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  //   sidebar.classList.toggle("open");
+  //   menuBtnChange(); //calling the function(optional)
+  // });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>

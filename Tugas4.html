@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tugas Basis Data</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <div class="logo_name">Tugas Basis Data</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="index.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Profile</span>
+          </a>
+          <span class="tooltip">Profile</span>
+        </li>
+        <li>
+          <a href="Tugas1.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas 1</span>
+          </a>
+          <span class="tooltip">Tugas 1</span>
+        </li>
+        <li>
+          <a href="Tugas2.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas2</span>
+          </a>
+          <span class="tooltip">Tugas2</span>
+        </li>
+        <li>
+          <a href="Tugas3.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas3</span>
+          </a>
+          <span class="tooltip">Tugas3</span>
+        </li>
+        <li>
+          <a href="Tugas4.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas4</span>
+          </a>
+          <span class="tooltip">Tugas4</span>
+        </li>
+        <li>
+          <a href="Tugas5.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas5</span>
+          </a>
+          <span class="tooltip">Tugas5</span>
+        </li>
+        <li>
+          <a href="Tugas6.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Tugas6</span>
+          </a>
+          <span class="tooltip">Tugas6</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="/assets/profile.jpeg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name">Muhammad Jibrail N</div>
+              <div class="job">UBP Karawang</div>
+            </div>
+          </div>
+          <!-- <i class='bx bx-log-out' id="log_out" ></i> -->
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div>
+        <h1 style="margin-left: 10px">Apa itu normalisasi pada ERD</h1>
+        <div style="padding: 25px">
+          <h3>Normalisasi pada ERD</h3>
+          <p class="text-content">
+            Normalisasi merupakan cara pendekatan dalam membangun desain logika
+            basis data relasional yang tidak secara langsung berkaitan dengan
+            modal data, tetapi dengan menerapkan sejumlah aturan dan kriteria
+            standar untuk menghasilkan struktur tabel yang normal. Normalisasi
+            pada ERD bertujuan untuk mengurangi anomali data, meminimalkan
+            redundansi, dan memastikan bahwa struktur database memenuhi
+            prinsip-prinsip normalisasi. Dengan adanya teknik normalisasi maka
+            data dalam tabel-tabel database dapat tersimpan dengan efisien dan
+            konsisten.
+          </p>
+          <p>
+            Normalisasi ERD melibatkan pemisahan entitas dan atribut-atributnya
+            ke dalam tabel-tabel terpisah, serta menghubungkan tabel-tabel
+            tersebut dengan kunci asing (foreign key) untuk menjaga integritas
+            referensial. Proses normalisasi umumnya dibagi menjadi beberapa
+            bentuk normalisasi, seperti:
+          </p>
+          <ul>
+            <li class="list-content">
+              <h3>Normalisasi Tingkat Pertama 1NF(First Normal Form)</h3>
+              <p>
+                Memastikan bahwa setiap kolom dalam tabel hanya berisi data
+                atomik (data yang tidak dapat dibagi lebih lanjut), dan setiap
+                baris memiliki identifikasi unik. Selain itu pada bentuk ini
+                data dalam tabel tidak ada yang ganda.
+              </p>
+            </li>
+
+            <li class="list-content">
+              <h3>Normalisasi Tingkat Kedua 2NF(Second Normal Form)</h3>
+              <p>
+                Memastikan bahwa setiap non-kunci atribut dalam tabel tergantung
+                sepenuhnya pada kunci utama (primary key) tabel tersebut. Dalam
+                hal ini, atribut yang memiliki ketergantungan parsial harus
+                dipindahkan ke tabel terpisah.
+              </p>
+            </li>
+
+            <li class="list-content">
+              <h3>Normalisasi Tingkat Ketiga 3NF(Third Normal Form)</h3>
+              <p>
+                Memastikan bhwa tidak ada atribut transitif (atribut yang
+                bergantung pada atribut non-kunci) dalam tabel. Atribut-atribut
+                semacam ini juga harus dipindahkan ke tabel terpisah.
+              </p>
+            </li>
+          </ul>
+          <p>Berikut adalah Proses Normalisasi pada Tabel:</p>
+          <h3>Tabel Asal (Sebelum Normalisasi)</h3>
+          <div class="table">
+            <table border="1">
+              <tr>
+                <th>ID Pelanggan</th>
+                <th>Nama Pelanggan</th>
+                <th>Pesanan</th>
+                <th>Tanggal Pesanan</th>
+                <th>Jumlah</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jibrail</td>
+                <td>Pesanan 1</td>
+                <td>2023-01-15</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jibrail</td>
+                <td>Pesanan 2</td>
+                <td>2023-02-20</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Alya</td>
+                <td>Pesanan 3</td>
+                <td>2023-03-10</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bayu</td>
+                <td>Pesanan 4</td>
+                <td>2023-04-05</td>
+                <td>3</td>
+              </tr>
+            </table>
+          </div>
+          <h3>
+            Bentuk 1NF (Setiap kolom berisi data atomik dan tidak ada data
+            ganda)
+          </h3>
+          <div class="table">
+            <p>Table Pelanggan:</p>
+            <table border="1">
+              <tr>
+                <th>ID Pelanggan</th>
+                <th>Nama Pelanggan</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jibrail</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Alya</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bayu</td>
+              </tr>
+            </table>
+            <p>Tabel Pesanan:</p>
+            <table border="1">
+              <tr>
+                <th>ID Pesanan</th>
+                <th>Pesanan</th>
+                <th>Tanggal Pesanan</th>
+                <th>Jumlah</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Pesanan 1</td>
+                <td>2023-01-15</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pesanan 2</td>
+                <td>2023-02-20</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Pesanan 3</td>
+                <td>2023-03-10</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Pesanan 4</td>
+                <td>2023-04-05</td>
+                <td>3</td>
+              </tr>
+            </table>
+          </div>
+
+          <h3>
+            Bentuk 2NF (Semua atribut non-kunci bergantung pada kunci utama)
+          </h3>
+          <div class="table">
+            <p>Tabel Pelanggan:</p>
+            <table border="1">
+              <tr>
+                <th>ID Pelanggan</th>
+                <th>Nama Pelanggan</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jibrail</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Alya</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bayu</td>
+              </tr>
+            </table>
+            <p>Tabel Pesanan:</p>
+            <table border="1">
+              <tr>
+                <th>ID Pesanan</th>
+                <th>Pesanan</th>
+                <th>Tanggal Pesanan</th>
+                <th>Jumlah</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Pesanan 1</td>
+                <td>2023-01-15</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pesanan 2</td>
+                <td>2023-02-20</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Pesanan 3</td>
+                <td>2023-03-10</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Pesanan 4</td>
+                <td>2023-04-05</td>
+                <td>3</td>
+              </tr>
+            </table>
+          </div>
+          <center>
+            <p>
+              Tidak ada yang perlu berubah karena semua attribut non kunci
+              sepenuhnya bergantung pada kunci utama
+            </p>
+          </center>
+          <h3>Bentuk 3NF (Tidak ada atribut transitif):</h3>
+
+          <div class="table">
+            <p>Tabel Pelanggan:</p>
+            <table border="1">
+              <tr>
+                <th>ID Pelanggan</th>
+                <th>Nama Pelanggan</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jibrail</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Alya</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bayu</td>
+              </tr>
+            </table>
+            <p>Tabel Pesanan:</p>
+            <table border="1">
+              <tr>
+                <th>ID Pesanan</th>
+                <th>Tanggal Pesanan</th>
+                <th>Jumlah</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2023-01-15</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2023-02-20</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2023-03-10</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>2023-04-05</td>
+                <td>3</td>
+              </tr>
+            </table>
+          </div>
+          <br />
+          <p>
+            Normalisasi membantu mengurangi redundansi data, meningkatkan
+            efisiensi penyimpanan, dan memastikan integritas data. Namun,
+            terlalu banyak normalisasi juga dapat memperlambat kinerja database
+            dalam beberapa situasi. Oleh karena itu, perlu mempertimbangkan
+            situasi khusus dan kebutuhan aplikasi sebelum melakukan normalisasi
+            ERD.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+      //   sidebar.classList.toggle("open");
+      //   menuBtnChange(); //calling the function(optional)
+      // });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+        }
+      }
+    </script>
+  </body>
+</html>
